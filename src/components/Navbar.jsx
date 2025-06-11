@@ -21,7 +21,7 @@ export default function Navbar() {
           <div
             className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#FB923C] to-[#F97316] flex items-center justify-center 
               text-white font-semibold text-lg select-none cursor-pointer
-              shadow-lg hover:scale-110 transition-transform duration-300 ease-in-out"
+              shadow-lg hover:scale-110 transition-transform duration-300 ease-in-out uppercase"
             title="User Profile"
           >
             {user.fullname.slice(0, 1)}

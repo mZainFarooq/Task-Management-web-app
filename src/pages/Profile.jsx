@@ -47,8 +47,8 @@ export default function Profile() {
         <div className="flex flex-col items-center space-y-4">
           {/* Profile Photo */}
           <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-[#FB923C] bg-[#FB923C] flex items-center justify-center">
-            <span className="text-white text-4xl font-semibold select-none">
-              Z
+            <span className="text-white text-4xl font-semibold select-none uppercase">
+              {user.fullname.slice(0, 1)}
             </span>
           </div>
 
