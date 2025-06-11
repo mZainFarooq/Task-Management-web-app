@@ -3,10 +3,10 @@ import FullScreenLoader from "../components/FullScreenLoader";
 import { useState } from "react";
 import { handleSignInwithEmailandPassword } from "../firebase/authHandling";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function SignIn() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
   const [loading, setLoading] = useState(false);
 
   const {
