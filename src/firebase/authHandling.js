@@ -48,7 +48,7 @@ export const handleSignUpwithEmailandPassword = async (
     const user = userCredential.user;
 
     await addUserToFirestore(user, data);
-    dispatch(setUser({ ...data, user: user.uid }));
+    dispatch(setUser({ ...data, uid: user.uid }));
     toast.success("Account Successfully Created");
   } catch (error) {
     console.error("❌ Signup error:", error.message);

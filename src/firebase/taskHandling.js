@@ -12,8 +12,10 @@ import { db } from "./config";
 import toast from "react-hot-toast";
 import { deleteTask, editTask, setTask } from "../features/taskSlice";
 
-export const handleAddTaskToFirestore = async (uid, data, dispatch) => {
+export const handleAddTaskToFirestore = async (user, data, dispatch) => {
+  const { uid } = user;
   try {
+    console.log(uid, data);
     if (!uid || !data) {
       toast.error("User ID ya data missing hai 😕");
       return;

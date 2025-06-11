@@ -13,6 +13,7 @@ export default function TaskPage() {
   const [filter, setFilter] = useState("all");
   const tasks = useSelector((state) => state.task);
   const user = useSelector((state) => state.user);
+  console.log(user);
 
   const [isOpen, setisOpen] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
@@ -41,7 +42,7 @@ export default function TaskPage() {
       handleEditTaskToFirestore(user, selectedTask.taskId, taskData, dispatch);
       setIsEdit(false);
     } else {
-      handleAddTaskToFirestore(user.uid, taskData, dispatch);
+      handleAddTaskToFirestore(user, taskData, dispatch);
     }
   };
   return (
