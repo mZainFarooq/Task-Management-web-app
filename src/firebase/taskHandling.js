@@ -15,7 +15,6 @@ import { deleteTask, editTask, setTask } from "../features/taskSlice";
 export const handleAddTaskToFirestore = async (user, data, dispatch) => {
   const { uid } = user;
   try {
-    console.log(uid, data);
     if (!uid || !data) {
       toast.error("User ID ya data missing hai 😕");
       return;
@@ -100,7 +99,6 @@ export const handleDeleteTask = async (userId, taskId, dispatch) => {
     dispatch(deleteTask(taskId));
     toast.success("Task deleted successfully ✅");
   } catch (error) {
-    console.error("Delete Task Error:", error.message);
     toast.error("Failed to delete task. Please try again ❌");
   }
 };
