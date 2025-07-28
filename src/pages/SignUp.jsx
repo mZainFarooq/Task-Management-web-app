@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import FullScreenLoader from "../components/FullScreenLoader";
 import { handleSignUpwithEmailandPassword } from "../firebase/authHandling";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default function SignUp() {

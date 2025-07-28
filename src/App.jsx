@@ -35,7 +35,7 @@ const App = () => {
             );
           });
         } else {
-          dispatch(setUser(snap.exists() ? snap.data() : false));
+          dispatch(setUser(doc.exists() ? doc.data() : false));
         }
       } else {
         dispatch(setUser(false));
