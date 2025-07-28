@@ -13,7 +13,6 @@ import {
 import { auth, db } from "./config";
 import toast from "react-hot-toast";
 import { setUser } from "../features/authSlice";
-import { setTask } from "../features/taskSlice";
 import { fetchUserTasks } from "./taskHandling";
 
 const addUserToFirestore = async (user, data) => {

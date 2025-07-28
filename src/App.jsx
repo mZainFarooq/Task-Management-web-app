@@ -35,7 +35,7 @@ const App = () => {
             );
           });
         } else {
-          dispatch(setUser(doc.exists() ? doc.data() : false));
+          dispatch(setUser(false));
         }
       } else {
         dispatch(setUser(false));
